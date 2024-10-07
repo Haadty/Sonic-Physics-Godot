@@ -1,0 +1,56 @@
+[gd_scene load_steps=3 format=3 uid="uid://bspfr5wtfwnbm"]
+
+[ext_resource type="Script" path="res://addons/sprite_cutter/AtlasScene.gd" id="1_rxqy5"]
+[ext_resource type="Texture2D" uid="uid://dsx83b0uf8bxa" path="res://Sprites/Player/sonic flip.png" id="2_sl33q"]
+
+[node name="AtlasScene" type="Node"]
+script = ExtResource("1_rxqy5")
+destination_path = "res://Sprites/Player/Sonic/Balance Back"
+
+[node name="balance_back 0" type="Sprite2D" parent="."]
+position = Vector2(240, 124)
+texture = ExtResource("2_sl33q")
+region_enabled = true
+region_rect = Rect2(3127, 3037, 29, 38)
+
+[node name="balance_back 1" type="Sprite2D" parent="."]
+position = Vector2(306, 100)
+texture = ExtResource("2_sl33q")
+region_enabled = true
+region_rect = Rect2(3089, 3036, 32, 39)
+
+[node name="balance_back 2" type="Sprite2D" parent="."]
+position = Vector2(352, 146)
+texture = ExtResource("2_sl33q")
+region_enabled = true
+region_rect = Rect2(3050, 3036, 34, 40)
+
+[node name="balance_back 3" type="Sprite2D" parent="."]
+position = Vector2(353, 233)
+texture = ExtResource("2_sl33q")
+region_enabled = true
+region_rect = Rect2(3010, 3039, 37, 35)
+
+[node name="balance_back 4" type="Sprite2D" parent="."]
+position = Vector2(415, 98)
+texture = ExtResource("2_sl33q")
+region_enabled = true
+region_rect = Rect2(2972, 3039, 34, 37)
+
+[node name="balance_back 5" type="Sprite2D" parent="."]
+position = Vector2(452, 187)
+texture = ExtResource("2_sl33q")
+region_enabled = true
+region_rect = Rect2(2933, 3041, 35, 38)
+
+[node name="balance_back 6" type="Sprite2D" parent="."]
+position = Vector2(477, 258)
+texture = ExtResource("2_sl33q")
+region_enabled = true
+region_rect = Rect2(2896, 3040, 32, 39)
+
+[node name="balance_back 7" type="Sprite2D" parent="."]
+position = Vector2(557, 169)
+texture = ExtResource("2_sl33q")
+region_enabled = true
+region_rect = Rect2(2864, 3041, 28, 35)

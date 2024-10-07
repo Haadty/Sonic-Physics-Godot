@@ -3,7 +3,6 @@ class_name Player
 
 signal ground_enter
 
-
 @export var bounds: Array[Resource]
 @export var stats: Array[Resource]
 

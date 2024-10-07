@@ -29,4 +29,4 @@ func animate(player: Player, _delta: float):
 		player.skin.set_animation_state(PlayerSkin.ANIMATION_STATES.rolling)
 		player.skin.set_rolling_animation_speed(last_absolute_horizontal_speed)
 	elif player.state_machine.last_state == "Spring" or player.state_machine.last_state == "Braking":
-		player.skin.set_animation_state(PlayerSkin.ANIMATION_STATES.walking)
+		player.skin.set_animation_state(PlayerSkin.ANIMATION_STATES.walk)

@@ -10,7 +10,6 @@ class_name PlayerStateMachine
 	"Rolling": $Rolling,
 	"Braking": $Braking,
 	"Air": $Air,
-	"Spring": $Spring
 }
 
 var current_state: String

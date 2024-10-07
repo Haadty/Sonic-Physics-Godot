@@ -1,19 +1,18 @@
-extends Sprite2D
+extends AnimatedSprite2D
 class_name PlayerSkin
 
 const AIR_ROTATION_SPEED: float = 3.2
 const GROUND_ROTATION_SPEED: float = 13.0
 const ANIMATION_STATES: Dictionary = {
 	"idle": 0,
-	"walking": 1,
+	"walk": 1,
 	"running": 2,
-	"peel_out": 3,
+	"running_fast": 3,
 	"rolling": 4,
 	"skidding": 5,
-	"corkscrew": 6,
-	"balance_front": 7,
-	"balance_back": 8,
-	"push": 9
+	"balance_front": 6,
+	"balance_back": 7,
+	"push": 8
 }
 
 @onready var animation_tree: AnimationTree = $AnimationTree
@@ -29,13 +28,16 @@ func set_animation_state(state: int) -> void:
 		current_state = state
 		animation_tree.set("parameters/state/transition_request", current_state)
 
+func get_animation_state() -> int:
+	return current_state
+
 func set_running_animation_state(speed: float) -> void:
-	var state: int = ANIMATION_STATES.walking
+	var state: int = ANIMATION_STATES.walk
 	
-	if speed > 355 and speed <= 595:
+	if speed > 355 and speed <= 495:
 		state = ANIMATION_STATES.running
-	elif speed > 595:
-		state = ANIMATION_STATES.peel_out
+	elif speed > 495:
+		state = ANIMATION_STATES.running_fast
 	
 	set_animation_state(state)
 
@@ -45,6 +47,11 @@ func set_animation_speed(value: float) -> void:
 func set_regular_animation_speed(value: float) -> void:
 	var speed: float = max(8.0 / 60.0 + value / 120.0, 1.0)
 	set_animation_speed(speed)
+	
+	if get_animation_state() == 2:
+		set_animation_speed(speed / 2)
+	elif get_animation_state() == 3:
+		set_animation_speed(speed / 3)
 
 func set_rolling_animation_speed(value: float) -> void:
 	var speed: float = max(4 / 60.0 + value / 120.0, 1.0)

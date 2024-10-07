@@ -1,0 +1,95 @@
+[gd_resource type="AnimationNodeBlendTree" load_steps=12 format=3 uid="uid://cvqcwj0yor7xd"]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_kj1wh"]
+animation = &"BalanceBack"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_p4cyd"]
+animation = &"BalanceFront"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_c08q7"]
+animation = &"Idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_xo2of"]
+animation = &"Push"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_27tce"]
+animation = &"Rolling"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_x6skp"]
+animation = &"Running"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_jxtq7"]
+animation = &"RunningFast"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ffhf8"]
+animation = &"Skidding"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_k62jk"]
+animation = &"Walk"
+
+[sub_resource type="AnimationNodeTimeScale" id="AnimationNodeTimeScale_ukkke"]
+
+[sub_resource type="AnimationNodeTransition" id="AnimationNodeTransition_asttt"]
+input_0/name = "0"
+input_0/auto_advance = false
+input_0/break_loop_at_end = false
+input_0/reset = true
+input_1/name = "1"
+input_1/auto_advance = false
+input_1/break_loop_at_end = false
+input_1/reset = true
+input_2/name = "2"
+input_2/auto_advance = false
+input_2/break_loop_at_end = false
+input_2/reset = true
+input_3/name = "3"
+input_3/auto_advance = false
+input_3/break_loop_at_end = false
+input_3/reset = true
+input_4/name = "4"
+input_4/auto_advance = false
+input_4/break_loop_at_end = false
+input_4/reset = true
+input_5/name = "5"
+input_5/auto_advance = false
+input_5/break_loop_at_end = false
+input_5/reset = true
+input_6/name = "6"
+input_6/auto_advance = false
+input_6/break_loop_at_end = false
+input_6/reset = true
+input_7/name = "7"
+input_7/auto_advance = false
+input_7/break_loop_at_end = false
+input_7/reset = true
+input_8/name = "8"
+input_8/auto_advance = false
+input_8/break_loop_at_end = false
+input_8/reset = true
+
+[resource]
+graph_offset = Vector2(-472.66, -71.5813)
+nodes/BalanceBack/node = SubResource("AnimationNodeAnimation_kj1wh")
+nodes/BalanceBack/position = Vector2(-100, 920)
+nodes/BalanceFront/node = SubResource("AnimationNodeAnimation_p4cyd")
+nodes/BalanceFront/position = Vector2(-100, 780)
+nodes/Idle/node = SubResource("AnimationNodeAnimation_c08q7")
+nodes/Idle/position = Vector2(-100, -60)
+nodes/Push/node = SubResource("AnimationNodeAnimation_xo2of")
+nodes/Push/position = Vector2(-100, 1060)
+nodes/Rolling/node = SubResource("AnimationNodeAnimation_27tce")
+nodes/Rolling/position = Vector2(-100, 500)
+nodes/Running/node = SubResource("AnimationNodeAnimation_x6skp")
+nodes/Running/position = Vector2(-100, 220)
+nodes/RunningFast/node = SubResource("AnimationNodeAnimation_jxtq7")
+nodes/RunningFast/position = Vector2(-100, 360)
+nodes/Skidding/node = SubResource("AnimationNodeAnimation_ffhf8")
+nodes/Skidding/position = Vector2(-100, 640)
+nodes/Walk/node = SubResource("AnimationNodeAnimation_k62jk")
+nodes/Walk/position = Vector2(-100, 80)
+nodes/output/position = Vector2(760, 320)
+nodes/speed/node = SubResource("AnimationNodeTimeScale_ukkke")
+nodes/speed/position = Vector2(520, 300)
+nodes/state/node = SubResource("AnimationNodeTransition_asttt")
+nodes/state/position = Vector2(300, 360)
+node_connections = [&"output", 0, &"speed", &"speed", 0, &"state", &"state", 0, &"Idle", &"state", 1, &"Walk", &"state", 2, &"Running", &"state", 3, &"RunningFast", &"state", 4, &"Rolling", &"state", 5, &"Skidding", &"state", 6, &"BalanceFront", &"state", 7, &"BalanceBack", &"state", 8, &"Push"]
