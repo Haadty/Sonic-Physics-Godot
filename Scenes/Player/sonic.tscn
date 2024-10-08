@@ -118,7 +118,7 @@ input_8/break_loop_at_end = false
 input_8/reset = true
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_7w5xq"]
-graph_offset = Vector2(-363.26, 17.4548)
+graph_offset = Vector2(-100, 17.4548)
 nodes/BalanceBack/node = SubResource("AnimationNodeAnimation_kj1wh")
 nodes/BalanceBack/position = Vector2(-100, 920)
 nodes/BalanceFront/node = SubResource("AnimationNodeAnimation_p4cyd")

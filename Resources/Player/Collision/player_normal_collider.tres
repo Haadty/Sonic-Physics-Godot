@@ -5,7 +5,7 @@
 [resource]
 script = ExtResource("1_tqcvj")
 offset = Vector2(0, 0)
-height_radius = 19.0
+height_radius = 16.0
 width_radius = 9.0
 push_height_offset = 8.0
 push_radius = 1.0

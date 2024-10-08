@@ -4,11 +4,11 @@
 
 [resource]
 script = ExtResource("1_lqsq0")
-acceleration = 168.75
-deceleration = 1800.0
+acceleration = 250.0
+deceleration = 600.0
 friction = 168.75
 slope_factor = 450.0
-top_speed = 360.0
+top_speed = 600.0
 dash_speed = 600.0
 min_speed_to_brake = 240.0
 min_speed_to_roll = 60.0
