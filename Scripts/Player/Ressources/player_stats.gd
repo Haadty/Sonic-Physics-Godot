@@ -3,11 +3,11 @@ class_name PlayerStats
 
 const CONTROL_LOCK_DURATION: float = 0.5
 
-@export var acceleration: float = 168.75
-@export var deceleration: float = 1800
+@export var acceleration: float = 268.75
+@export var deceleration: float = 800
 @export var friction: float = 168.75
 @export var slope_factor: float = 450
-@export var top_speed: float = 360
+@export var top_speed: float = 500
 @export var dash_speed: float = 600
 @export var min_speed_to_brake: float = 240
 
