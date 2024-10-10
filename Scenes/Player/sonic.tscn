@@ -118,7 +118,7 @@ input_8/break_loop_at_end = false
 input_8/reset = true
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_7w5xq"]
-graph_offset = Vector2(-100, 17.4548)
+graph_offset = Vector2(-517.987, -63.4682)
 nodes/BalanceBack/node = SubResource("AnimationNodeAnimation_kj1wh")
 nodes/BalanceBack/position = Vector2(-100, 920)
 nodes/BalanceFront/node = SubResource("AnimationNodeAnimation_p4cyd")
@@ -167,8 +167,8 @@ script = ExtResource("9_noakl")
 
 [node name="Skin" type="AnimatedSprite2D" parent="."]
 sprite_frames = ExtResource("11_k6o3k")
-animation = &"Idle"
-frame = 29
+animation = &"Running"
+frame = 7
 script = ExtResource("2_b8ilv")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Skin"]

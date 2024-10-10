@@ -36,6 +36,7 @@ var limit_right: float
 
 var is_jumping: bool
 var is_rolling: bool
+var is_crouch: bool
 var is_control_locked: bool
 var is_locked_to_limits: bool
 
