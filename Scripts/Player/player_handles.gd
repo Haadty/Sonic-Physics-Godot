@@ -2,6 +2,8 @@ extends PlayerMovement
 
 class_name PlayerHandles
 
+var control = PlayerControls.new();
+
 func initialize_collider():
 	var collision: CollisionShape2D = CollisionShape2D.new()
 	collider_shape = RectangleShape2D.new()
@@ -98,34 +100,9 @@ func apply_motion(desired_velocity: Vector2, delta: float):
 	else:
 		position += desired_velocity * delta
 
-func handle_input():
-	var horizontal: float = Input.get_axis("player_left", "player_right")
-	var vertical: float = Input.get_axis("player_down", "player_up")
-	if __is_grounded:
-		horizontal = 0.0 if is_control_locked else horizontal
-	input_direction = Vector2(horizontal, vertical)
-	input_dot_velocity = input_direction.dot(velocity)
-
-func lock_controls(lock_duration: float):
-	if not is_control_locked:
-		input_direction.x = 0
-		is_control_locked = true
-		control_lock_timer = lock_duration
-
-func unlock_controls():
-	if is_control_locked:
-		is_control_locked = false
-		control_lock_timer = 0
-
-func handle_control_lock(delta: float):
-	if is_control_locked:
-		control_lock_timer -= delta
-		if abs(velocity.x) == 0 or control_lock_timer <= 0:
-			unlock_controls()
-
 func handle_fall():
 	if __is_grounded and absolute_ground_angle > current_stats.slide_angle and abs(velocity.x) <= current_stats.min_speed_to_fall:
-		lock_controls(current_stats.CONTROL_LOCK_DURATION)
+		control.lock_controls(current_stats.CONTROL_LOCK_DURATION)
 
 		if absolute_ground_angle > current_stats.fall_angle:
 			exit_ground()

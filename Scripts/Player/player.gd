@@ -8,8 +8,8 @@ func _ready():
 	initialize_skin()
 
 func _physics_process(delta):
-	handle_input()
-	handle_control_lock(delta)
+	control.handle_input()
+	control.handle_control_lock(delta)
 	handle_state_update(delta)
 	handle_motion(delta)
 	handle_limits()
