@@ -1,8 +1,13 @@
-extends PlayerMovement
+extends PlayerBase
 
 class_name PlayerHandles
 
-var control = PlayerControls.new();
+var control;
+var movement;
+
+func _init(controls: PlayerControls, movements: PlayerMovement):
+	control = controls
+	movement = movements
 
 func initialize_collider():
 	var collision: CollisionShape2D = CollisionShape2D.new()
@@ -42,9 +47,9 @@ func set_stats(index: int):
 		current_stats = stats[index]
 
 func handle_collision():
-	handle_wall_collision()
-	handle_ground_collision()
-	handle_ceiling_collision()
+	movement.handle_wall_collision()
+	movement.handle_ground_collision()
+	movement.handle_ceiling_collision()
 
 func is_grounded():
 	return __is_grounded and velocity.y >= 0
@@ -105,7 +110,7 @@ func handle_fall():
 		control.lock_controls(current_stats.CONTROL_LOCK_DURATION)
 
 		if absolute_ground_angle > current_stats.fall_angle:
-			exit_ground()
+			movement.exit_ground()
 
 func handle_slope(delta: float):
 	if __is_grounded:

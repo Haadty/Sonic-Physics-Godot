@@ -11,9 +11,6 @@ signal ground_enter
 @export_flags_2d_physics var ground_layer: int = 1
 @export_flags_2d_physics var ceiling_layer: int = 1
 
-@onready var skin = $Skin as PlayerSkin
-@onready var state_machine = $StateMachine as PlayerStateMachine
-
 @onready var initial_parent = get_parent()
 
 var world: World2D
