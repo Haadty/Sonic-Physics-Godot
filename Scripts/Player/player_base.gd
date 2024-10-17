@@ -1,5 +1,4 @@
 extends Node2D
-
 class_name PlayerBase
 
 signal ground_enter

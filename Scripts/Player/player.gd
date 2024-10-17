@@ -16,7 +16,7 @@ var movement
 func _ready():
 	control = Controls.new();
 	movement = Movements.new();
-	handle = Handles.new(control, movement);
+	handle = Handles.new(control, movement, skin, state_machine);
 	handle.initialize_collider()
 	handle.initialize_resources()
 	handle.initialize_state_machine()

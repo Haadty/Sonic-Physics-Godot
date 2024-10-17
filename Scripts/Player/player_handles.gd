@@ -4,10 +4,15 @@ class_name PlayerHandles
 
 var control;
 var movement;
+var state_machine;
+var skin;
 
-func _init(controls: PlayerControls, movements: PlayerMovement):
+
+func _init(controls: PlayerControls, movements: PlayerMovement, skins: PlayerSkin, state_machines: PlayerStateMachine):
 	control = controls
 	movement = movements
+	state_machine = state_machines
+	skin = skins
 
 func initialize_collider():
 	var collision: CollisionShape2D = CollisionShape2D.new()
